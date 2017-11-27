@@ -1,0 +1,24 @@
+{
+  "name": "medic-log",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "sadleader"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.7",
+    "angular-bootstrap": "^2.5.0",
+    "bootstrap": "^3.3.7",
+    "components-font-awesome": "^4.7.0",
+    "lodash": "^4.17.4"
+  }
+}
