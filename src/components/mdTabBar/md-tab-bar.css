@@ -1,10 +1,10 @@
-tab-bar {
+md-tab-bar {
     position: absolute;
     bottom: 0;
     width: 100%;
 }
 
-tab-bar > .panel{
+md-tab-bar > .panel{
     margin:0px;
     color: #333;
     background-color: #f5f5f5;

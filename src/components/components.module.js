@@ -1,10 +1,10 @@
 'use strict';
 
-import './tabBar/tabBar.directive.js';
+import './mdTabBar/mdTabBar.directive.js';
 
 
 const components = angular.module('mdComponents', [
-    'mdComponents.tabBar'
+    'mdTabBar'
 ]);
 
 export default components;
