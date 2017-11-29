@@ -1,5 +1,16 @@
-var app = angular.module('medicLog', []);
+import 'jquery';
+import 'angular';
 
-app.controller('baseCtrl', function($scope){
-    $scope.greeting = 'Welcome to MedicLog!';
-})
+import './components/components.module.js';
+
+
+var app = angular.module('medicLog', [
+    'ui.router',
+
+    'mdComponents'
+]);
+
+app.config(function($urlRouterProvider) {
+    $urlRouterProvider.otherwise('/');
+});
+
