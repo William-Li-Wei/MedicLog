@@ -1,20 +1,11 @@
 <div class="panel panel-default">
     <div class="panel-body">
-        <div class="col-xs-3 tab">
-            <i class="fa fa-star fa-2x"></i> <br/>
-            Dashboard
-        </div>
-        <div class="col-xs-3 tab">
-            <i class="fa fa-calendar-o fa-2x"></i> <br/>
-            Plan
-        </div>
-        <div class="col-xs-3 tab">
-            <i class="fa fa-medkit fa-2x"></i> <br/>
-            Medkit
-        </div>
-        <div class="col-xs-3 tab">
-            <i class="fa fa-cogs fa-2x"></i> <br/>
-            Setting
+        <div class="col-xs-3 tab" ng-repeat="tab in tabs">
+            <div class="tab-button" ng-class="{ active: tab.name == state.current.name }" ng-click="navigateTo(tab.name)">
+                <i ng-class="tab.icon"></i>
+                <br/>
+                {{ tab.title }}
+            </div>
         </div>
     </div>
 </div>

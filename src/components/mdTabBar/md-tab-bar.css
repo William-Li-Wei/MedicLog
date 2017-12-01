@@ -8,9 +8,19 @@ md-tab-bar > .panel{
     margin:0px;
     color: #333;
     background-color: #f5f5f5;
-    border-color: #ddd
+    border-color: #ddd;
 }
 
 .tab {
     text-align: center;
+}
+
+.tab-button {
+    cursor: pointer;
+}
+.tab-button.active {
+    color: #5bc0de;
+}
+.tab-button:hover {
+    color: #5bc0de;
 }

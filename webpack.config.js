@@ -10,6 +10,7 @@ module.exports = {
             'angular',
             'angular-ui-router/release/angular-ui-router.js',
             'jquery',
+            'lodash',
             'bootstrap',
             'bootstrap/dist/css/bootstrap.css',
             'components-font-awesome'

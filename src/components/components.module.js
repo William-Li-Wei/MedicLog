@@ -3,8 +3,8 @@
 import './mdTabBar/mdTabBar.directive.js';
 
 
-const components = angular.module('mdComponents', [
+const componentsModule = angular.module('mdComponents', [
     'mdTabBar'
 ]);
 
-export default components;
+export default componentsModule;
