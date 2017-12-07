@@ -1,5 +1,7 @@
 'use strict';
 
+import './resources/app.css';
+
 import './modules/dashboard/dashboard.module.js';
 import './modules/plan/plan.module.js';
 import './modules/medKit/medKit.module.js';

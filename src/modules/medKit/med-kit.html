@@ -1,3 +1,26 @@
 <div>
     <md-page-header menu="pageMenu"></md-page-header>
+
+    <div class="page-container">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="pill in medKit.pills">
+                <span class="label label-warning">14</span>
+                <md-pill-icon form="pill.form"></md-pill-icon>&nbsp;&nbsp;
+                some text hrere
+                <!--
+                <div class="row">
+                    <div class="col-xs-1">
+                        <md-pill-icon form="pill.form"></md-pill-icon>
+                    </div>
+                    <div class="col-xs-8" style="padding-top: 8px;">
+                        {{ pill.name }}
+                    </div>
+                    <div class="col-xs-3" style="padding-top: 8px; font-size: 15px;">
+                        {{ pill.stock }} in stock
+                    </div>
+                </div>
+                -->
+            </li>
+        </ul>
+    </div>
 </div>

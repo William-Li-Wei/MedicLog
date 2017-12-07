@@ -4,22 +4,21 @@ export default function($scope, medKitService) {
     /* -------- Initialization -------- */
     $scope.medKit = angular.copy(medKitService.get());
 
-    /*
     $scope.medKit.pills = [
         {
             name: 'Vitamin C',
             producer: 'Rosh',
-            form: 'Tablet',
+            form: 'tablet',
             stock: 46
         },
         {
             name: 'Fish Oil',
             producer: 'Double Heart',
-            form: 'Capsule',
+            form: 'spray',
             stock: 32
         }
-    ]
-    */
+    ];
+    console.log($scope.medKit);
 
     $scope.pageMenu = {
         title: 'My MedKit',

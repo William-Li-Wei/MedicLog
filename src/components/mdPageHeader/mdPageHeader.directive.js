@@ -14,3 +14,5 @@ const pageHeaderDirective = angular.module('mdPageHeader', [])
             }
         }
     })
+
+export default pageHeaderDirective;

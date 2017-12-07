@@ -1,0 +1,12 @@
+@import url('./medical-icons/flaticon.css');
+
+.page-container {
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+}
+
+.center-aligned {
+    display: flex;
+    align-items: center;
+}
