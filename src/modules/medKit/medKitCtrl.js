@@ -6,7 +6,7 @@ export default function($scope, medKitService) {
 
     $scope.mode = 'list';
     $scope.medKit = angular.copy(medKitService.get());
-    $scope.medicationForms = ['tablet', 'capsule', 'powder', 'cream', 'spray', 'drops', 'tape'];
+    $scope.medicationForms = ['tablet', 'capsule', 'powder', 'cream', 'spray', 'drop', 'tape'];
 
     const pageMenu = {
         list: {

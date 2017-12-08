@@ -16,7 +16,7 @@ const pillIconDirective = angular.module('mdPillIcon', [])
                     'powder': 'flaticon-medicine-6',
                     'cream': 'flaticon-cream-1',
                     'spray': 'flaticon-spray-1',
-                    'drops': 'flaticon-eye-drops',
+                    'drop': 'flaticon-eye-drops',
                     'tape': 'flaticon-band-aid'
                 };
 
