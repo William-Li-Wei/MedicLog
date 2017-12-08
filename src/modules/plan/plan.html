@@ -1,1 +1,116 @@
-<h1>your medic plan</h1>
+<div>
+    <md-page-header menu="pageMenu"></md-page-header>
+
+    <div class="page-view">
+        <div class="page-container">
+            <div class="panel panel-default" ng-if="mode == 'add'">
+                <div class="panel-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-xs-4 control-label" style="font-size: x-small;">Medication Name</label>
+                            <div class="col-xs-8">
+                                <div class="btn-group full-width">
+                                    <button type="button" class="btn btn-default dropdown-toggle full-width"
+                                                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="pull-left">{{ newRule.medication }}</span>
+                                        <span class="pull-right">
+                                            <span class="caret "></span>
+                                        </span>
+                                    </button>
+                                    <ul class="dropdown-menu full-width">
+                                        <li ng-class="{ active: newRule.medication == medication.name }" ng-repeat="medication in planRulesOptions.medicationList">
+                                            <a ng-click="selectMedication(medication)">{{ medication.name }}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-4 control-label" style="font-size: x-small;">Frequency</label>
+                            <div class="col-xs-8">
+                                <div class="btn-group full-width">
+                                    <button type="button" class="btn btn-default dropdown-toggle full-width"
+                                                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="pull-left">
+                                            <span ng-if="newRule.frequency > 1">
+                                                {{ newRule.frequency }} times
+                                            </span>
+                                            <span ng-if="newRule.frequency == 1">once</span>
+                                            a day
+                                        </span>
+                                        <span class="pull-right">
+                                            <span class="caret "></span>
+                                        </span>
+                                    </button>
+                                    <ul class="dropdown-menu full-width">
+                                        <li ng-class="{ active: newRule.frequency == frequency }" ng-repeat="frequency in planRulesOptions.frequency">
+                                            <a ng-click="selectFrequency(frequency)">
+                                                <span ng-if="frequency > 1">
+                                                    {{ frequency }} times
+                                                </span>
+                                                <span ng-if="frequency == 1">once</span>
+                                                a day
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-4 control-label" style="font-size: x-small;">Quantity</label>
+                            <div class="col-xs-8">
+                                <div class="btn-group full-width">
+                                    <button type="button" class="btn btn-default dropdown-toggle full-width"
+                                                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="pull-left" ng-if="newRule.form">
+                                            everytime {{ newRule.quantity }} {{ newRule.form }}
+                                        </span>
+                                        <span class="pull-right">
+                                            <span class="caret "></span>
+                                        </span>
+                                    </button>
+                                    <ul class="dropdown-menu full-width">
+                                        <li ng-class="{ active: newRule.quantity == quantity }"
+                                            ng-repeat="quantity in planRulesOptions.quantity" ng-if="newRule.form">
+                                            <a ng-click="selectQuantity(quantity)">
+                                                everytime {{ quantity }} {{ newRule.form | medicationUnit }}<span ng-if="quantity > 1">s</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div> 
+
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="rule in plan.rules">
+                    <div class="row vertical-centered">
+                        <div class="col-xs-2">
+                            <i class="fa fa-minus-circle fa-2x" style="color: #d9534f; cursor: pointer;"
+                                                                ng-click="deleteRule($index)" ng-if="mode === 'edit'"></i>
+                            <md-pill-icon form="rule.form" ng-if="mode !== 'edit'"></md-pill-icon>
+                        </div>
+                        <div class="col-xs-10">
+                            {{ rule.medication }}
+                            <div class="pull-right text-note">
+                                <span>
+                                    <span ng-if="rule.frequency > 1">
+                                        {{ rule.frequency }} times
+                                    </span>
+                                    <span ng-if="rule.frequency == 1">once</span>
+                                    a day
+                                </span>
+                                <span ng-if="rule.form !== 'spray'">
+                                    , everytime {{ rule.quantity }} {{ rule.form | medicationUnit }}<span ng-if="rule.quantity > 1">s</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
