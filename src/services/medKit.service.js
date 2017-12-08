@@ -18,7 +18,7 @@ export default function() {
         save: function(medKit) {
             if(!!medKit) {
                 _medKit = angular.copy(medKit);
-                window.localStorage.setItem(JSON.stringify(_medKit));
+                window.localStorage.setItem('medKit', JSON.stringify(_medKit));
             }
 
             return _medKit;

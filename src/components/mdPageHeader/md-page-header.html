@@ -2,7 +2,7 @@
     <div class="panel-heading">
         <div class="row">
             <div class="col-xs-2">
-                <div class="header-button left-button" ng-if="menu.leftButton">
+                <div class="header-button left-button vertical-centered" ng-click="menu.leftButton.onClick()" ng-if="menu.leftButton">
                     <i ng-class="menu.leftButton.icon"></i>
                     <span class="button-text">&nbsp;{{ menu.leftButton.text }}</span>
                 </div>   
@@ -11,7 +11,7 @@
                 <div class="header-title">{{ menu.title }}</div>
             </div>
             <div class="col-xs-2">
-                <div class="header-button right-button" ng-if="menu.rightButton">
+                <div class="header-button right-button vertical-centered" ng-click="menu.rightButton.onClick()" ng-if="menu.rightButton">
                     <i ng-class="menu.rightButton.icon"></i> 
                     <span class="button-text">&nbsp;{{ menu.rightButton.text }}</span>
                 </div> 

@@ -13,10 +13,10 @@ const pillIconDirective = angular.module('mdPillIcon', [])
                 const formIconMap = {
                     'tablet': 'flaticon-medicine-1',
                     'capsule': 'flaticon-pills-1',
-                    'spray': 'flaticon-spray-1',
-                    'drop': 'flaticon-eye-drops',
-                    'cream': 'flaticon-cream-1',
                     'powder': 'flaticon-medicine-6',
+                    'cream': 'flaticon-cream-1',
+                    'spray': 'flaticon-spray-1',
+                    'drops': 'flaticon-eye-drops',
                     'tape': 'flaticon-band-aid'
                 };
 
