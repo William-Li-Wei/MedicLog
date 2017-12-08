@@ -1,0 +1,35 @@
+md-page-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    color: red;
+}
+
+md-page-header > .panel {
+    margin-bottom: 0;
+}
+
+.header-title {
+    text-align: center;
+    font-size: 25px;
+}
+
+.header-button {
+    padding-top: 7px;
+    cursor: pointer;
+}
+
+.button-text {
+    font-size: 16px;
+}
+
+.left-button {
+    text-align: left;
+    float: left;
+}
+
+.right-button {
+    text-align: right;
+    float: right;
+}
