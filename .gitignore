@@ -1,2 +1,10 @@
 /node_modules/*
 /bower_components/*
+
+platforms/
+
+hooks/
+
+plugins/
+
+res/

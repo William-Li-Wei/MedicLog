@@ -18,7 +18,7 @@ module.exports = {
     },
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'www')
     },
     module: {
         rules: [
@@ -58,7 +58,7 @@ module.exports = {
         modules: ['bower_components', 'node_modules']
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin(['www']),
         new HtmlWebpackPlugin({
             template: './src/index.html'
         }),
